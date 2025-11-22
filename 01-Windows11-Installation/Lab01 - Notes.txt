@@ -1,0 +1,86 @@
+Lab 01 - Windows 11 Virtual Machine Setup
+=========================================
+
+VM Name: WindowsLab01
+Hypervisor: Hyper-V (Windows 10 Pro)
+Date: 11/20/2025
+
+---------------------------
+1. Objective
+---------------------------
+- Create a Windows 11 virtual machine using Hyper-V.
+- Configure virtual hardware (TPM, Secure Boot, CPU, RAM).
+- Install Windows 11 and verify network/drive configuration.
+- Document the lab with screenshots for portfolio use.
+
+---------------------------
+2. VM Configuration Summary
+---------------------------
+- Generation: 2
+- Startup RAM: 4096 MB (Dynamic Memory enabled)
+- Virtual CPUs: 4
+- Virtual Disk: 40GB VHDX (dynamic)
+- Virtual Switch: External (bridged to physical NIC)
+- Secure Boot: Enabled
+- TPM: Enabled (required for Windows 11)
+- ISO Used: Windows 11 64-bit
+
+---------------------------
+3. Steps Completed
+---------------------------
+1. Created new VM named "WindowsLab01" in Hyper-V Manager.
+2. Configured Generation 2 VM and set 4GB RAM with Dynamic Memory.
+3. Added 4 virtual processors.
+4. Created a 40GB dynamic VHDX.
+5. Attached Windows 11 ISO to a virtual DVD drive.
+6. Enabled Secure Boot and TPM in Security settings.
+7. Adjusted firmware boot order so DVD boots first.
+8. Started VM and installed Windows 11 Pro.
+9. Completed basic setup and reached the desktop.
+10. Verified system information with "winver".
+11. Verified network configuration using "ipconfig".
+12. Verified disk layout in Disk Management.
+
+---------------------------
+4. What I Learned
+---------------------------
+- How to create and configure a Generation 2 VM.
+- Why Secure Boot and TPM are required for Windows 11.
+- How Hyper-V handles dynamic memory and dynamic disks.
+- How to attach ISO files and manage firmware boot order.
+- Basics of disk management inside a VM.
+- Confirming network connectivity and addressing with ipconfig.
+
+---------------------------
+5. Screenshots Collected
+---------------------------
+01 - VM Setup
+02 - Security settings (Secure Boot + TPM)
+03 - DVD Drive with Windows 11 ISO attached
+04 - Firmware boot order (DVD first)
+05 - Memory settings (Dynamic RAM)
+06 - Processor settings (4 vCPU)
+07 - Virtual Hard Drive details
+08 - Windows 11 desktop after installation
+09 - winver version information
+10 - ipconfig showing network adapter information
+11 - Disk Management overview
+
+--------------------------
+6. Issues Encountered / Notes
+--------------------------
+No issues encountered during this lab.
+
+--------------------------
+7. Skills Practiced
+--------------------------
+Hyper-V management and VM creation
+Installing Windows 11 in a virtualized environment
+Configuring TPM and Secure Boot
+Managing dynamic memory and virtual drives
+Basic OS configuration and verification
+Network troubleshooting basics inside a VM
+
+==========================
+END OF LAB 01
+==========================
