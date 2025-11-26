@@ -1,0 +1,87 @@
+Lab 02 - Windows 2022 Server Installation
+=========================================
+
+VM Name: Server 2022
+Hypervisor: Oracle VirtualBox (Windows 10 Home)
+Date: 11/25/2025
+
+---------------------------
+1. Objective
+---------------------------
+- Create a Windows 2022 virtual machine using VirtualBox.
+- Configure virtual hardware (CPU, RAM).
+- Install Windows Server 2022 and verify network/drive configuration.
+- Document the lab with screenshots for portfolio use.
+
+---------------------------
+2. VM Configuration Summary
+---------------------------
+- Startup RAM: 8192 MB
+- Virtual CPUs: 2
+- Virtual Disk: 50GB
+- ISO Used: Windows 2022 Server 64-bit
+
+---------------------------
+3. Steps Completed
+---------------------------
+1. Created new VM named "Server 2022" in VirtualBox Manager.
+2. Set 8GB RAM.
+3. Added 2 virtual processors.
+4. Created a 50GB disk.
+5. Mounted Windows 2022 Server ISO to a virtual DVD drive.
+7. Started VM and installed Windows 2022.
+8. Created Admin account.
+9. Signed-in with Admin account.
+10. Reached the desktop.
+11. Changed Time-zone.
+12. Verified network configuration using "ipconfig".
+13. Verified disk layout in Disk Management.
+14. Shutdown VM using "shutdown -s".
+
+---------------------------
+4. What I Learned
+---------------------------
+- How to create and configure a VM in VirtualBox.
+- I gained experience preparing a VM for a Windows 2022 installation.
+- I learned how to set a server-level Administrator account and complete the initial configuration steps required for Windows Server.
+- I became familiar with verifying network status and drive layout to ensure the system is ready for use.
+- I practiced shutting down the server OS using command-line tools like "shutdown -s".
+
+---------------------------
+5. Screenshots Collected
+---------------------------
+01 - Server 2022 creation
+02 - Virtual Hardware (8GB Memory, 2 vCPU, 50GB disk)
+03 - VM Summary
+04 - Mounted Server 2022 ISO
+05 - Selected correct Server 2022 version (Standard, Desktop Experience)
+06 - Selected 50GB Unallocated Space
+07 - Admin account creation
+08 - Sign-in with Admin account
+09 - Windows 2022 desktop (Version at bottom right)
+10 - Changed time-zone
+11 - Server Manager Dashboard
+12 - ipconfig output
+13 - Disk Management
+14 - Shutdown VM through Command-line
+
+--------------------------
+6. Issues Encountered / Notes
+--------------------------
+No issues encountered during this lab.
+
+--------------------------
+7. Skills Practiced
+--------------------------
+- Creating and managing VMs in VirtualBox.
+- Mounting and booting from a Windows Server 2022 ISO.
+- Performing a clean installation and initial setup of Windows Server 2022.
+- Creating a local Administrator account for server management.
+- Verifying network configuration using "ipconfig".
+- Reviewing disk structure and partitions in Disk Management.
+- Adjusting time settings such as time-zone.
+- Using command-line tools to shut down the server (shutdown -s).
+
+==========================
+END OF LAB 02
+==========================
