@@ -29,14 +29,14 @@ Date: 11/25/2025
 3. Added 2 virtual processors.
 4. Created a 50GB disk.
 5. Mounted Windows 2022 Server ISO to a virtual DVD drive.
-7. Started VM and installed Windows 2022.
-8. Created Admin account.
-9. Signed-in with Admin account.
-10. Reached the desktop.
-11. Changed Time-zone.
-12. Verified network configuration using "ipconfig".
-13. Verified disk layout in Disk Management.
-14. Shutdown VM using "shutdown -s".
+6. Started VM and installed Windows 2022.
+7. Created Admin account.
+8. Signed-in with Admin account.
+9. Reached the desktop.
+10. Changed Time-zone.
+11. Verified network configuration using "ipconfig".
+12. Verified disk layout in Disk Management.
+13. Shutdown VM using "shutdown -s".
 
 ---------------------------
 4. What I Learned

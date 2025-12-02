@@ -1,0 +1,95 @@
+Lab 03 - Active Directory Domain Services Installation
+=========================================
+
+VM Name: Server 2022
+Hypervisor: Oracle VirtualBox (Windows 10 Home)
+Date: 12/01/2025
+
+---------------------------
+1. Objective
+---------------------------
+- Install Active Directory Domain Services (AD DS) on Windows Server 2022.
+- Promote the server to a Domain Controller.
+- Create a new forest and domain.
+- Verify Active Directory installation and DNS functionality.
+- Document the lab with screenshots for portfolio use.
+
+---------------------------
+2. VM Configuration Summary
+---------------------------
+- Startup RAM: 8192 MB
+- Virtual CPUs: 2
+- Virtual Disk: 50GB
+- ISO Used: Windows 2022 Server 64-bit
+
+---------------------------
+3. Steps Completed
+---------------------------
+1. Opened Server Manager automatically at login.
+2. Selected Manage > Add Roles and Features.
+3. Kept default settings until Server Roles.
+4. Enabled Active Directory Domain Services role.
+5. Accepted required features for AD DS.
+6. Completed installation and waited for the "Promote this server to a domain controller" option to appear.
+7. Selected Add a new forest with domain name:
+   - Domain Name: javinit.com
+8. Set DSRM password for Directory Services Restore Mode.
+9. Accepted default DNS options.
+10. Accepted default Additional Options.
+11. Accepted default Paths.
+12. Copied the PowerShell script from the Review Options page in the wizard.
+13. Closed the wizard and opened an Administrator PowerShell window.
+14. Pasted the script (Ctrl+V) into PowerShell and executed it.
+15. Waited for the install to complete.
+16. Server rebooted after install.
+17. Logged in using the new domain credentials:
+    - javinit\Administrator
+18. Ran the whoami, net use, and net accounts commands in Administrator Command Prompt.
+19. Ran the net user administrator /domain command.
+20. Ran the systeminfo.exe command.
+21. Opened Server Manager > Tools > Active Directory Users and Computers.
+
+---------------------------
+4. What I Learned
+---------------------------
+- How to add server roles using Server Manager.
+- The process of installing Active Directory Domain Services.
+- How to promote a server to a Domain Controller and create a new forest.
+- How to log into a domain using domain credentials.
+- How to locate AD management tools like Active Directory Users and Computers.
+
+---------------------------
+5. Screenshots Collected
+---------------------------
+01 - Rename Computer
+02 - Server Manager Showing New Name
+03 - AD DS Installation Confirmation
+04 - Promotion Warning
+05 - PowerShell Script Copied
+06 - Script Pasted in PowerShell
+07 - Sign-out prompt
+08 - Domain Login
+09 - Command Outputs (whoami, net use, net accounts)
+10 - net user administrator /domain output
+11 - systeminfo.exe output
+12 - Server Manager showing Active Directory Users and Computers
+13 - Active Directory Users and Computers
+
+--------------------------
+6. Issues Encountered / Notes
+--------------------------
+- Received a DNS delegation warning (expected in new forest creation).
+- No other issues during installation or domain promotion.
+
+--------------------------
+7. Skills Practiced
+--------------------------
+- Installing and configuring server roles in Windows Server 2022.
+- Domain Controller promotion using Active Directory Domain Services Configuration Wizard.
+- Managing AD DS installation and configuration.
+- Navigating AD administrative tools (ADUC).
+- Understanding domain logon process and forest creation.
+
+==========================
+END OF LAB 03
+==========================
