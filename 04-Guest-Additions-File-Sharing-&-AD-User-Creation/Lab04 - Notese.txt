@@ -1,0 +1,101 @@
+Lab 04 - Guest Additions File Sharing & AD User Creation
+=========================================
+
+VM Name: Server 2022
+Hypervisor: Oracle VirtualBox (Windows 10 Home)
+Date: 12/04/2025
+
+---------------------------
+1. Objective
+---------------------------
+- Install VirtualBox Guest Additions on Windows Server 2022.
+- Enable file sharing between host and VM using Guest Additions.
+- Create Active Directory users in an existing domain.
+- Verify user accounts and basic AD functionality.
+- Document the lab with screenshots for portfolio use.
+
+---------------------------
+2. VM Configuration Summary
+---------------------------
+- Startup RAM: 8192 MB
+- Virtual CPUs: 2
+- Virtual Disk: 50GB
+- ISO Used: Windows 2022 Server 64-bit
+
+---------------------------
+3. Steps Completed
+---------------------------
+1. Logged into Windows Server 2022 VM.
+2. Inserted Guest Additions CD: Devices > Insert Guest Additions CD Image
+3. Opened CD in File Explorer > ran VBoxWindowsAdditions-amd64.exe
+4. Clicked Next > Next > Install and rebooted VM when prompted.
+5. Created shared folder on host: C:\Users\javin\helpdesklab
+6. VirtualBox Settings > Shared Folders > Added folder helpdesklab > Checked Auto-mount and Make Permanent
+7. Copied file from host folder.
+8. Pasted file in shared folder.
+9. Verified shared folder and test file appears in VM under This PC.
+10. Opened Server Manager > Tools > Active Directory Users and Computers.
+11. Expanded domain > Users.
+12. Created new user Damian:
+    - First Name: Damian
+    - User Logon Name: Damian
+    - Checked: User must change password at next logon
+13. Verified account creation in ADUC.
+14. Checked user properties: Reset password, Enable/Disable account, Unlock account, Logon hours.
+15. Opened CMD > ran:
+    net user damian /domain
+16. Created second user Jordan:
+    - First Name: Jordan
+    - User Logon Name: Jordan
+    - Checked: User must change password at next logon
+17. Verified both users exist in ADUC.
+
+---------------------------
+4. What I Learned
+---------------------------
+- How to install VirtualBox Guest Additions.
+- How to create a shared folder between host and VM.
+- How to create and manage Active Directory users.
+- How to check AD account properties and verify account via CMD.
+- Basic file transfer between host and server VM.
+
+---------------------------
+5. Screenshots Collected
+---------------------------
+01 - Insert Guest Additions CD
+02 - Running VBoxWindowsAdditions-amd64.exe
+03 - Guest Additions Installed (Reboot Prompted)
+04 - Shared Folder Creation
+05 - Copied File from host
+06 - Paste Copied File in Shared Folder
+07 - Shared Folder in VM
+08 - File in Shared Folder on VM
+09 - New User Creation
+10 - User Created (Damian)
+11 - Damian Properties (Address)
+12 - Damian Properties (Account)
+13 - Reset Password Dialog Box
+14 - Account Disabled
+15 - Account Enabled
+16 - Logon Hours
+17 - net user damian /domain output
+18 - New User Creation (Jordan)
+19 - New Users Exist
+
+--------------------------
+6. Issues Encountered / Notes
+--------------------------
+- No issues encountered during shared folder setup or AD user creation.
+
+--------------------------
+7. Skills Practiced
+--------------------------
+- Installing VirtualBox Guest Additions.
+- Configuring shared folders for host-guest file transfer.
+- Creating and managing Active Directory users.
+- Verifying AD accounts using CMD.
+- Navigating ADUC for basic user management.
+
+==========================
+END OF LAB 04
+==========================
