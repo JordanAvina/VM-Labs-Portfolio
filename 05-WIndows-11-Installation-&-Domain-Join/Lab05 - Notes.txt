@@ -1,0 +1,141 @@
+Lab 05 - Windows 11 Installation & Domain Join
+=========================================
+
+VM Name: Windows 11 Lab 01/Windows Server 2022
+Hypervisor: Oracle VirtualBox (Windows 10 Home)
+Date: 12/06/2025
+
+---------------------------
+1. Objective
+---------------------------
+- Install Windows 11 Pro on a VirtualBox VM.
+- Configure Host-only networking for lab session.
+- Assign static IP addresses to Server 2022 and Windows 11 client.
+- Join Windows 11 VM to Active Directory domain.
+- Log in as domain user.
+- Document the lab steps and screenshots for portfolio use.
+
+---------------------------
+2. VM Configuration Summary
+---------------------------
+Server 2022 VM:
+- Startup RAM: 8192 MB
+- Virtual CPUs: 4
+- Virtual Disk: 50GB
+- ISO Used: Windows 2022 Server (64-bit)
+Windows 11 Lab 01:
+- Startup RAM: 4096 MB
+- Virtual CPUs: 2
+- TPM Type: 2.0
+- EFI: Enabled
+- Secure Boot: Enabled
+- Virtual Disk: 80 GB
+- ISO Used: Windows 11 Pro 64-bit
+
+---------------------------
+3. Steps Completed
+---------------------------
+01. Opened VirtualBox, created Windows 11 Pro VM (Windows 11 Lab 01).
+02. Mounted Windows 11 ISO, started installation.
+03. Selected Windows 11 Pro, accepted license terms.
+04. Turned off internet connection to bypass Microsoft account requirement (initial attempt failed).
+05. Opened CMD and ran OOBE\BYPASSNRO to bypass online account requirement.
+06. Created local user account Jordan during setup.
+07. Renamed Windows 11 VM to Desktop01.
+08. Created second Windows 11 Pro VM (Windows 11 Lab 2).
+09. Renamed second Windows 11 VM to Desktop02.
+10. Started Server 2022 VM.
+11. Configured Server 2022 and Windows 11 Lab 01 to use Host-only Adapter in VirtualBox network settings.
+12. Set Static IP on Server 2022:
+    - IP: 192.168.56.10
+    - Subnet: 255.255.255.0
+    - Default Gateway: 192.168.56.1
+    - DNS: 192.168.56.10
+    - Alternate DNS: 192.168.56.1
+13. Set static IP on Windows 11 Lab 01 (Desktop01):
+    - IP: 192.168.56.20
+    - Subnet: 255.255.255.0
+    - Default Gateway: 192.168.56.1
+    - DNS: 192.168.56.10
+    - Alternate DNS: 192.168.56.1
+14. Verified network connectivity from Windows 11 Lab 01:
+    - Ran ping javinit.com
+15. Verified Server 2022 IP configuration using ipconfig.
+16. Joined Desktop01 to domain javinit.com:
+    - Right-click This PC > Properties > Change > Domain > javinit.com.
+    - Entered domain admin credentials.
+    - Restarted VM to apply changes.
+17. Verified Desktop01 appeared in Active Directory Users and Computers on Server 2022.
+18. Logged into Desktop01 using domain user Damian (password change at first logon).
+19. Enabled Remote Desktop on Server 2022:
+    - Right-click This PC > Properties > Rename this PC (advanced) > Remote tab
+    - Check Allow remote connections to this computer.
+20. Opened Remote Desktop Connection (mstsc) on Windows 11 Lab 01.
+21. Started a remote session to Server 2022 using IP 192.168.56.10.
+22. Successfully connected, then ended the remote session.
+
+---------------------------
+4. What I Learned
+---------------------------
+- How to configure VirtualBox Host-only networking.
+- How to assign static IPs in Windows Server and Windows 11.
+- How to create and manage Active Directory user accounts.
+- How to verify user and computer objects in ADUC.
+- How to join a client machine to a domain.
+- How to use Remote Desktop between domain-joined systems.
+
+---------------------------
+5. Screenshots Collected
+---------------------------
+01 - Create VM (Windows 11 Lab 01)
+02 - ISO Mounted (Windows 11 Install)
+03 - Windows 11 Pro Selection
+04 - Disk Selection (80 GB Unallocated)
+05 - VirtualBox Host-only Adapter Settings
+06 - Network Error (Bypass Required)
+07 - CMD -- OOBE BYPASSNRO
+08 - BypassNRO Successful
+09 - Local User Creation (Jordan)
+10 - Rename PC to Desktop01
+11 - Create VM (Windows 11 Lab 2)
+12 - Local User Creation (Jordan2)
+13 - Rename PC to Desktop02
+14 - Server 2022 Static IP Settings
+15 - Desktop01 Static IP Settings
+16 - Desktop01 Ping javinit.com
+17 - Server 2022 ipconfig Output
+18 - This PC Properties (Desktop01)
+19 - Desktop01 Domain Join Credentials
+20 - Desktop01 Domain Join Successful
+21 - Restart After Domain Join
+22 - ADUC Showing Desktop01
+23 - Login as Domain User Damian
+24 - Damian Desktop (Successful Domain Login)
+25 - Server 2022 Enable Remote Desktop
+26 - Desktop01 RDC to 192.168.56.10
+27 - RDC Login Credentials
+28 - RDC Security Warning
+29 - Remote Session (Server 2022 Desktop)
+30 - Remote Session Ending
+
+--------------------------
+6. Issues Encountered / Notes
+--------------------------
+- Host-only network initially didn't work to bypass Microsoft account requirement.
+- Required CMD command OOBE\BYPASSNRO to continue installation without internet.
+- No other issues encountered during domain join or RDP setup.
+
+--------------------------
+7. Skills Practiced
+--------------------------
+- VM creation and Windows OS installation
+- Network interface configuration (Host-only)
+- Static IP configuration
+- Active Directory user creation and management
+- Domain joining process
+- Remote Desktop Protocol usage
+- Basic networking troubleshooting (ping, ipconfig)
+
+==========================
+END OF LAB 05
+==========================
